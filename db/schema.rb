@@ -15,6 +15,16 @@ ActiveRecord::Schema.define(version: 2020_12_01_104844) do
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "password"
+
+  create_table "pcs", force: :cascade do |t|
+    t.string "price"
+    t.string "pc"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "pks", force: :cascade do |t|
+    t.string "price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
