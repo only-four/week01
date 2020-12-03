@@ -17,7 +17,10 @@ ActiveRecord::Schema.define(version: 2020_12_03_034138) do
     t.string "author"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "password"
 
   create_table "pcs", force: :cascade do |t|
     t.string "price"
