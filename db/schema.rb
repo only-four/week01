@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_01_110107) do
+ActiveRecord::Schema.define(version: 2020_12_03_034138) do
+
+  create_table "notebooks", force: :cascade do |t|
+    t.string "title"
+    t.string "author"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "pcs", force: :cascade do |t|
     t.string "price"

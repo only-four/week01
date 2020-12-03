@@ -1,0 +1,31 @@
+<h1>筆記本列表</h1>
+
+<%= link_to '新增筆記本', new_notebook_path %>
+
+<hr>
+
+
+<table>
+  
+    <thead>
+      <tr>
+        <td>名稱</td>
+        <td>作者</td>
+        <td>編輯</td>
+        <td>刪除</td>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @notebooks.each do |notebook| %>
+        <tr>
+          <td><%= notebook.title %></td>
+          <td><%= notebook.author %></td>
+          <td><%= link_to '編輯筆記本', edit_notebook_path(notebook.id) %></td>
+          <td><%= link_to '刪除筆記本', notebook_path(notebook), method: 'delete', data: {confirm: '確定要刪除嗎？' }%></td>
+        </tr>
+      <% end %>
+    </tbody>
+
+
+</table>

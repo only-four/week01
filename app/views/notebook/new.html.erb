@@ -1,0 +1,19 @@
+<h1>新增筆記本</h1>
+
+<%= link_to '回筆記本列表', notebook_index_path	 %>
+
+<%= form_for(@notebook, url: notebook_index_path) do |form| %>
+
+<div class="field">
+  <%= form.label :title %>
+  <%= form.text_field :title %>
+</div>
+
+<div class="field">
+  <%= form.label :author %>
+  <%= form.text_field :author %>
+</div>
+
+
+  <%= form.submit '新增筆記本'%>
+<% end %>
